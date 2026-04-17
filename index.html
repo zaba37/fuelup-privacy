@@ -26,6 +26,7 @@
   <li><strong>Account and authentication data.</strong> If you sign in with Apple, Google, or Facebook, we may receive your unique user ID and, where permitted by the provider and you, your name, email address, and profile photo. We use this data to authenticate you and operate your account.</li>
   <li><strong>App content you create.</strong> We process the content you save in the app, such as vehicles, fuel logs, service logs, reminders, categories, settings, and similar account-linked records. This data may be stored in Firebase Realtime Database so it can sync across devices.</li>
   <li><strong>Files, attachments, and vehicle documents.</strong> If you add photos, scans, PDFs, office documents, archives, or other supported files to entries or vehicle records, the app may store local copies on your device. When cloud sync is available for your account, related metadata may be stored in Firebase Realtime Database and cloud copies, thumbnails, and related file paths may be stored in Firebase Storage.</li>
+  <li><strong>Receipt scanning data.</strong> If you use AI receipt scanning, we may process receipt or invoice images, OCR or extracted text, and draft field values generated from that content in order to help populate a form for your review. If you choose to keep the receipt image as an attachment after saving, that image is treated as a regular attachment and follows the storage, sync, and retention rules that apply to attachments.</li>
   <li><strong>Attachment sync and storage metadata.</strong> To manage file syncing and storage availability, we may process technical metadata such as file names, file types, MIME types, sizes, thumbnails, sync state, storage paths, cloud URLs, deletion markers, and storage usage or quota records.</li>
   <li><strong>Purchases and subscription status.</strong> Payments are processed by Apple In-App Purchases. We do <em>not</em> receive or store your full card or billing details. We may receive receipt, entitlement, subscription lifecycle, renewal, expiration, and related status information from Apple and RevenueCat to unlock or restrict Premium features and to manage retention flows tied to cloud attachments.</li>
   <li><strong>Usage, diagnostics, and performance data.</strong> We use Firebase Analytics and Firebase Crashlytics to understand app usage and improve stability. This may include device model, OS version, app version, crash traces, and similar diagnostic data.</li>
@@ -46,7 +47,8 @@
   <li>send reminders and retention-related notices when notifications are enabled;</li>
   <li>show ads in the free version and suppress ads for Premium users;</li>
   <li>analyze usage, detect problems, and improve app stability;</li>
-  <li>support optional voice-based entry creation.</li>
+  <li>support optional voice-based entry creation;</li>
+  <li>support optional AI-based receipt or invoice scanning.</li>
 </ul>
 
 <h2>3) Permissions and Feature Access</h2>
@@ -67,10 +69,15 @@
 
 <p>We do not promise that Apple, Firebase, Google, or other third-party providers retain no data when their services are used. Their handling of data is governed by their own policies and terms.</p>
 
-<h2>6) Notifications</h2>
+<h2>6) AI Receipt Scanning</h2>
+<p>FuelUp may offer an optional AI receipt scanning feature. If you use it, a receipt or invoice image may be preprocessed in the app and then sent to Firebase AI with a Google AI backend in order to extract or structure information for a draft entry or form. Generated results may be incomplete or inaccurate, so you should review and correct them before saving.</p>
+
+<p>If you decide to save the receipt or invoice image as part of an entry, that image may also be stored locally on your device and, where cloud sync is available for your account, synced or retained in the same way as other attachments. If you do not keep the image as an attachment, the image is still subject to processing by the third-party AI services involved in the scan flow according to their own policies.</p>
+
+<h2>7) Notifications</h2>
 <p>If you enable notifications, we may send you reminder notifications and retention-related notices. To do this, we may store and refresh push token records and related language or locale metadata connected to your account. You can turn notifications off in your device settings at any time.</p>
 
-<h2>7) Third-Party Services</h2>
+<h2>8) Third-Party Services</h2>
 <p>The app uses third-party services that may collect or process information according to their own terms and privacy policies:</p>
 <ul>
   <li><a href="https://support.google.com/admob/answer/6128543?hl=en" target="_blank" rel="noopener noreferrer">Google AdMob</a></li>
@@ -82,10 +89,10 @@
   <li><a href="https://www.facebook.com/privacy/policy" target="_blank" rel="noopener noreferrer">Meta (Facebook Login) Privacy Policy</a></li>
 </ul>
 
-<h2>8) Cookies and Similar Technologies</h2>
+<h2>9) Cookies and Similar Technologies</h2>
 <p>The app does not use browser cookies in the traditional sense. However, third-party SDKs and services such as AdMob, Firebase, Apple, and Google may use identifiers and similar technologies for analytics, diagnostics, advertising, fraud prevention, and service delivery.</p>
 
-<h2>9) Data Retention and Your Choices</h2>
+<h2>10) Data Retention and Your Choices</h2>
 <p>We keep information for as long as needed to provide the Service, comply with legal obligations, resolve disputes, and enforce our agreements.</p>
 
 <ul>
@@ -98,16 +105,16 @@
 
 <p>You may delete your account from within the app when logged in, or contact <a href="mailto:fueluphelp@gmail.com">fueluphelp@gmail.com</a> if you cannot access your account. You can also manage ad tracking and notification permissions in your device settings.</p>
 
-<h2>10) Security</h2>
+<h2>11) Security</h2>
 <p>We value your trust in providing your information and use commercially reasonable measures to protect it. However, no method of internet transmission or electronic storage is 100% secure, and we cannot guarantee absolute security.</p>
 
-<h2>11) Children's Privacy</h2>
+<h2>12) Children's Privacy</h2>
 <p>The Service is not directed to children under 13, or any higher minimum age required by your jurisdiction. We do not knowingly collect personal information from children. If we learn that a child has provided personal information, we will delete it.</p>
 
-<h2>12) Changes to This Privacy Policy</h2>
+<h2>13) Changes to This Privacy Policy</h2>
 <p>We may update this Privacy Policy from time to time. We will post any updated version on this page and change the "Last updated" date above. Your continued use of the Service after an update means you accept the revised Policy.</p>
 
-<h2>13) Contact Us</h2>
+<h2>14) Contact Us</h2>
 <p>If you have questions or suggestions about this Privacy Policy, contact <a href="mailto:fueluphelp@gmail.com">fueluphelp@gmail.com</a>.</p>
 
 </body>
