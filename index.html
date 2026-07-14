@@ -14,26 +14,26 @@
 <body>
 
 <h1>Privacy Policy</h1>
-<p><small>Last updated: 02 Apr 2026</small></p>
+<p><small>Last updated: 14 Jul 2026</small></p>
 
 <p>Krystian Żabicki built the FuelUp app as an ad-supported app with optional Premium subscription. This Service is provided by Krystian Żabicki and is intended for use as is.</p>
 
 <p>This Privacy Policy explains how we collect, use, store, and disclose information when you use FuelUp. By using the Service, you agree to the collection and use of information in accordance with this Policy. Terms used in this Privacy Policy have the same meanings as in our Terms &amp; Conditions unless otherwise defined here.</p>
 
 <h2>1) Information We May Collect</h2>
-<p>To provide login, sync, file storage, reminders, analytics, advertising in the free version, subscriptions, and optional voice features, we may process the following categories of data:</p>
+<p>To provide login, sync, file storage, reminders, nearby station and location-assisted features, analytics, advertising in the free version, subscriptions, and optional AI or voice features, we may process the following categories of data:</p>
 <ul>
-  <li><strong>Account and authentication data.</strong> If you sign in with Apple, Google, or Facebook, we may receive your unique user ID and, where permitted by the provider and you, your name, email address, and profile photo. We use this data to authenticate you and operate your account.</li>
+  <li><strong>Account and authentication data.</strong> If you sign in with Apple, Google, Facebook, or email/password where available, we may receive your unique user ID and, where permitted by the provider and you, your name, email address, and profile photo. We use this data to authenticate you and operate your account.</li>
   <li><strong>App content you create.</strong> We process the content you save in the app, such as vehicles, fuel logs, service logs, reminders, categories, settings, and similar account-linked records. This data may be stored in Firebase Realtime Database so it can sync across devices.</li>
   <li><strong>Files, attachments, and vehicle documents.</strong> If you add photos, scans, PDFs, office documents, archives, or other supported files to entries or vehicle records, the app may store local copies on your device. When cloud sync is available for your account, related metadata may be stored in Firebase Realtime Database and cloud copies, thumbnails, and related file paths may be stored in Firebase Storage.</li>
   <li><strong>Receipt scanning data.</strong> If you use AI receipt scanning, we may process receipt or invoice images, OCR or extracted text, and draft field values generated from that content in order to help populate a form for your review. If you choose to keep the receipt image as an attachment after saving, that image is treated as a regular attachment and follows the storage, sync, and retention rules that apply to attachments.</li>
   <li><strong>Attachment sync and storage metadata.</strong> To manage file syncing and storage availability, we may process technical metadata such as file names, file types, MIME types, sizes, thumbnails, sync state, storage paths, cloud URLs, deletion markers, and storage usage or quota records.</li>
-  <li><strong>Purchases and subscription status.</strong> Payments are processed by Apple In-App Purchases. We do <em>not</em> receive or store your full card or billing details. We may receive receipt, entitlement, subscription lifecycle, renewal, expiration, and related status information from Apple and RevenueCat to unlock or restrict Premium features and to manage retention flows tied to cloud attachments.</li>
+  <li><strong>Purchases and subscription status.</strong> Payments are processed by the platform store you use, such as Apple App Store in-app purchases on iOS or Google Play Billing on Android. We do <em>not</em> receive or store your full card or billing details. We may receive receipt, purchase token, entitlement, subscription lifecycle, renewal, expiration, and related status information from Apple, Google Play, and RevenueCat to unlock or restrict Premium features and to manage retention flows tied to cloud attachments.</li>
   <li><strong>Usage, diagnostics, and performance data.</strong> We use Firebase Analytics and Firebase Crashlytics to understand app usage and improve stability. This may include device model, OS version, app version, crash traces, and similar diagnostic data.</li>
-  <li><strong>Advertising and tracking data.</strong> In the free version, we may use Google AdMob to show ads. AdMob may process device identifiers, advertising data, and anti-fraud signals. If you allow app tracking on iOS, advertising identifiers may be used in accordance with Apple and Google policies. Premium removes in-app ads.</li>
+  <li><strong>Advertising and tracking data.</strong> In the free version, we may use Google AdMob to show ads. AdMob may process device identifiers, advertising data, ad performance data, and anti-fraud signals. Where your device, platform, and consent settings permit it, advertising identifiers may be used in accordance with Apple, Google, and AdMob policies. Premium removes in-app ads.</li>
   <li><strong>Notifications and messaging data.</strong> If notifications are enabled, we may store push notification tokens, language code, locale identifier, app version, and related technical metadata in order to send reminder notifications and retention-related notices.</li>
-  <li><strong>Voice logging data.</strong> If you use voice logging, the app may access your microphone and speech recognition permissions, create a transcript from your spoken input using iOS speech recognition services, and send the resulting transcript together with limited app context to Firebase AI using Google AI models in order to generate a draft entry for your review.</li>
-  <li><strong>Permission-related device data.</strong> Depending on which features you use, the app may request access to location, camera, photo library, files, microphone, speech recognition, notifications, and app tracking settings.</li>
+  <li><strong>Voice logging data.</strong> If voice logging is available on your platform and you use it, the app may access microphone and speech recognition permissions, create a transcript from your spoken input using platform speech recognition services, and send the resulting transcript together with limited app context to Firebase AI using Google AI models in order to generate a draft entry for your review.</li>
+  <li><strong>Permission-related device data.</strong> Depending on which features you use, the app may request access to location, camera, photo library or media picker, files, microphone, speech recognition, notifications, and advertising or tracking settings.</li>
 </ul>
 
 <h2>2) How We Use Information</h2>
@@ -53,7 +53,7 @@
 
 <h2>3) Permissions and Feature Access</h2>
 <ul>
-  <li><strong>Location.</strong> Used to help display nearby gas stations or location-based app features.</li>
+  <li><strong>Location.</strong> Used to help display nearby gas or charging stations, save location-assisted records, and support station visit reminders where that feature is available, enabled, and permitted by the platform.</li>
   <li><strong>Camera.</strong> Used to scan documents and capture photos for entries or vehicle records.</li>
   <li><strong>Photos and files.</strong> Used to import images and supported files into logs or vehicle documents.</li>
   <li><strong>Microphone and speech recognition.</strong> Used only when you actively use the voice logging feature.</li>
@@ -62,10 +62,10 @@
 </ul>
 
 <h2>4) Social Logins</h2>
-<p>If you choose to sign in with Apple, Google, or Facebook, the respective provider may share profile data as described above. We use it only to authenticate you and operate your account or session. Your use of those login providers is also subject to their own terms and privacy policies, and you can revoke access in the provider's settings.</p>
+<p>If you choose to sign in with Apple, Google, Facebook, or another supported provider, the respective provider may share profile data as described above. We use it only to authenticate you and operate your account or session. Your use of those login providers is also subject to their own terms and privacy policies, and you can revoke access in the provider's settings.</p>
 
 <h2>5) Voice Logging</h2>
-<p>FuelUp offers an optional voice logging feature. If you use it, the app requests microphone and speech recognition access, captures your spoken input while the feature is active, and uses iOS speech recognition services to produce a transcript. The transcript, together with limited context such as relevant app settings or vehicle context, may then be processed by Firebase AI with a Google AI backend to generate a draft fuel-log entry for your review before saving.</p>
+<p>FuelUp may offer an optional voice logging feature on supported platforms. If you use it, the app requests microphone and speech recognition access, captures your spoken input while the feature is active, and uses platform speech recognition services to produce a transcript. The transcript, together with limited context such as relevant app settings or vehicle context, may then be processed by Firebase AI with a Google AI backend to generate a draft fuel-log entry for your review before saving.</p>
 
 <p>We do not promise that Apple, Firebase, Google, or other third-party providers retain no data when their services are used. Their handling of data is governed by their own policies and terms.</p>
 
@@ -85,7 +85,8 @@
   <li><a href="https://firebase.google.com/support/privacy/" target="_blank" rel="noopener noreferrer">Firebase Crashlytics, Realtime Database, Storage, Cloud Messaging, and Firebase AI</a></li>
   <li><a href="https://www.revenuecat.com/privacy/" target="_blank" rel="noopener noreferrer">RevenueCat</a></li>
   <li><a href="https://www.apple.com/legal/privacy/en-ww/" target="_blank" rel="noopener noreferrer">Apple Privacy Policy</a> and <a href="https://www.apple.com/legal/privacy/data/en/app-store/" target="_blank" rel="noopener noreferrer">App Store and In-App Purchase Data</a></li>
-  <li><a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer">Google Privacy Policy</a> (including Google Sign-In and Google AI services used through Firebase AI)</li>
+  <li><a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer">Google Privacy Policy</a> (including Google Sign-In, Google Play, Google Play Billing, Google Maps/Places services, and Google AI services used through Firebase AI)</li>
+  <li><a href="https://payments.google.com/payments/apis-secure/get_legal_document?ldo=0&amp;ldt=playtos&amp;ldr=US" target="_blank" rel="noopener noreferrer">Google Play Terms of Service</a></li>
   <li><a href="https://www.facebook.com/privacy/policy" target="_blank" rel="noopener noreferrer">Meta (Facebook Login) Privacy Policy</a></li>
 </ul>
 
@@ -103,7 +104,7 @@
   <li><strong>Crash and analytics data.</strong> Diagnostic and analytics retention may also be determined by the relevant third-party provider's policies.</li>
 </ul>
 
-<p>You may delete your account from within the app when logged in, or contact <a href="mailto:fueluphelp@gmail.com">fueluphelp@gmail.com</a> if you cannot access your account. You can also manage ad tracking and notification permissions in your device settings.</p>
+<p>You may delete your account from within the app when logged in, or contact <a href="mailto:fueluphelp@gmail.com">fueluphelp@gmail.com</a> if you cannot access your account. You can also manage ad tracking, advertising ID, location, and notification permissions in your iOS or Android device settings.</p>
 
 <h2>11) Security</h2>
 <p>We value your trust in providing your information and use commercially reasonable measures to protect it. However, no method of internet transmission or electronic storage is 100% secure, and we cannot guarantee absolute security.</p>
