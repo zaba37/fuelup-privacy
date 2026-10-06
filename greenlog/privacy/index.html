@@ -3,105 +3,67 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Privacy Policy - Garden Calendar</title>
+    <title>Privacy Policy - Florli</title>
     <style>
-      :root {
-        color-scheme: light;
-        --green: #2e7d32;
-        --text: #142119;
-        --muted: #5f6b63;
-        --bg: #f7faf7;
-        --card: #ffffff;
-        --line: #dfe8df;
-      }
-
-      * {
-        box-sizing: border-box;
-      }
-
-      body {
-        margin: 0;
-        background: var(--bg);
-        color: var(--text);
-        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-        line-height: 1.6;
-      }
-
-      main {
-        width: min(820px, calc(100% - 40px));
-        margin: 0 auto;
-        padding: 56px 0;
-      }
-
-      article {
-        background: var(--card);
-        border: 1px solid var(--line);
-        border-radius: 8px;
-        padding: 32px;
-      }
-
-      h1, h2 {
-        line-height: 1.15;
-      }
-
-      h1 {
-        margin: 0 0 8px;
-        font-size: clamp(2rem, 5vw, 3rem);
-      }
-
-      h2 {
-        margin: 32px 0 10px;
-        font-size: 1.25rem;
-      }
-
-      p, li {
-        color: var(--muted);
-      }
-
-      a {
-        color: var(--green);
-        font-weight: 700;
-      }
-
-      .updated {
-        margin-top: 0;
-        font-size: 0.95rem;
-      }
+      :root { color-scheme:light dark; --bg:#f4f5ed; --card:#fff; --text:#132d22; --muted:#506058; --line:#d9ded5; --link:#0f5a42; }
+      @media (prefers-color-scheme:dark) { :root { --bg:#0f3126; --card:#173d31; --text:#f8f7ef; --muted:#c3cec7; --line:#315548; --link:#d9ff70; } }
+      * { box-sizing:border-box; } body { margin:0; background:var(--bg); color:var(--text); font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif; line-height:1.6; }
+      main { width:min(880px,calc(100% - 32px)); margin:0 auto; padding:40px 0; } article { background:var(--card); border:1px solid var(--line); border-radius:24px; padding:clamp(22px,5vw,42px); }
+      h1,h2 { line-height:1.2; } h1 { margin:0 0 8px; font-size:clamp(2rem,5vw,3rem); } h2 { margin:30px 0 8px; font-size:1.25rem; }
+      p,li { color:var(--muted); } a { color:var(--link); font-weight:700; } .updated { margin-top:0; } hr { border:0; border-top:1px solid var(--line); margin:38px 0; }
     </style>
   </head>
-  <body>
-    <main>
-      <article>
-        <h1>Privacy Policy</h1>
-        <p class="updated">Last updated: June 22, 2026</p>
+  <body><main><article>
+    <h1>Florli Privacy Policy</h1>
+    <p class="updated">Last updated: October 6, 2026</p>
+    <p>Florli is local-first. You can keep a garden journal without an account. Cloud synchronization, online analysis, weather, photos and notifications are separate choices. Store builds enable limited usage analytics by default; you can disable it in Settings.</p>
 
-        <p>Garden Calendar is a local-first garden care app. It helps you remember garden areas, activities, treatment duration, reminders and product templates without requiring an account.</p>
+    <h2>Data kept on your device</h2>
+    <p>By default, garden areas, plants, activities, observations, care plans, product templates, reminders, settings, local photos and a random local profile ID stay on your device. Local data remains until you delete it in the app or remove the app. Device backups are controlled by your operating-system and backup provider.</p>
 
-        <h2>Data stored on your device</h2>
-        <p>The app stores your garden areas, garden activities, product templates, reminder settings, coming soon votes, local settings and a local user ID on your device. This data is used to run the app and is not uploaded to a GreenLog account or backend.</p>
+    <h2>Optional cloud and accounts</h2>
+    <p>If you explicitly enable cloud features, Florli uses Google Firebase (Authentication, Cloud Firestore, Cloud Storage, Cloud Functions and App Check) to process an account identifier and the garden records you choose to synchronize. If you register, Firebase Authentication also processes your email address or federated sign-in identifier. Synchronized records and confirmed photos are kept until you delete the account. Deleting an individual synchronized item may leave a minimal deletion marker so another offline device cannot restore it.</p>
+    <p>Account deletion can be requested inside the app. Access is blocked immediately; Florli then removes the Firebase user, owner-scoped database records and private photo files in a background process, with a second verification after 24 hours. A minimal hashed receipt and deletion marker are kept for 30 days after verified completion so a lost acknowledgement can be recovered, and then become eligible for automatic deletion. Firestore TTL deletion typically occurs within a further 24 hours but is not immediate. Google-managed backups and service logs may follow the provider's separate retention schedule.</p>
 
-        <h2>Analytics</h2>
-        <p>Release builds may use Firebase Analytics to understand whether the app is useful. Analytics events may include app opens, onboarding completion, feature usage and aggregate counts such as the number of active areas or upcoming tasks.</p>
-        <p>We do not intentionally collect garden notes, account data, email address, precise location, photos or contacts through analytics.</p>
+    <h2>Photos and AI</h2>
+    <p>A local photo is not uploaded by ordinary synchronization. When you confirm a photo feature, Florli creates a reduced JPEG copy and removes metadata such as GPS before uploading it to private Cloud Storage. An unconfirmed uploaded copy expires after seven days. Confirmed photos remain with the related garden history until you remove the account.</p>
+    <p>When you start AI analysis, the minimum relevant garden context, your description and any confirmed photos are sent through Florli's Cloud Functions to Google Vertex AI Gemini. Florli stores the validated result and an accounting record with your cloud profile until account deletion. Google states that customer data is not used to train its models without permission. Some provider-side processing may have its own limited retention. Product research uses Grounding with Google Search; Google states that prompts, context and output for grounded results are retained for 30 days.</p>
 
-        <h2>Notifications</h2>
-        <p>Garden Calendar uses local notifications only when you create a reminder. Notification scheduling happens on your device.</p>
+    <h2>Weather and location</h2>
+    <p>Location is optional. You can enter a city instead. If you use device location, Florli asks for approximate foreground location once, rounds coordinates to about 1 km and does not track location in the background. With cloud enabled, rounded coordinates are sent to Florli's backend and to OpenWeather for weather and city search. Shared Florli weather cache entries expire after 24 hours. OpenWeather's privacy and retention terms apply to its processing.</p>
 
-        <h2>Support email</h2>
-        <p>If you contact support, your email address and message are used only to reply to your request.</p>
+    <h2>Usage analytics</h2>
+    <p>Store builds enable Firebase Analytics by default to measure app and feature use. You can disable it at any time in Settings. Events describe app and feature interaction and may include aggregate counts. Florli does not intentionally put garden notes, photos, email addresses or location in analytics events. Advertising identifiers, advertising personalization and cross-app tracking are not used. Google Analytics retention and data-sharing settings are controlled in the production Firebase/Analytics console and must be verified before release.</p>
 
-        <h2>Deleting data</h2>
-        <p>You can delete local app data in the app settings or by uninstalling the app from your device.</p>
+    <h2>Notifications, support and choices</h2>
+    <p>Reminders are scheduled locally after you choose to enable them. If you contact support, we use your email address, message and voluntarily supplied diagnostics to answer and resolve the request.</p>
+    <p>You can use Florli locally, pause cloud synchronization, disable analytics, deny location/photo/notification permissions, delete local data, or request cloud-account deletion in the app. For help or an external deletion request, email <a href="mailto:fueluphelp@gmail.com?subject=Florli%20account%20deletion">fueluphelp@gmail.com</a>.</p>
+    <p>Florli does not sell personal data and does not use it for third-party advertising or cross-company tracking.</p>
 
-        <h2>Contact</h2>
-        <p>Questions about this policy can be sent to <a href="mailto:fueluphelp@gmail.com">fueluphelp@gmail.com</a>.</p>
+    <hr>
+    <h1>Polityka prywatności Florli</h1>
+    <p class="updated">Ostatnia aktualizacja: 6 października 2026 r.</p>
+    <p>Florli działa przede wszystkim lokalnie. Dziennik ogrodu nie wymaga konta. Synchronizacja, analiza online, pogoda, wysyłanie zdjęć i powiadomienia są osobnymi decyzjami. W buildach sklepowych ograniczona analityka użycia jest domyślnie włączona; można ją wyłączyć w Ustawieniach.</p>
 
-        <h2>Polityka prywatności</h2>
-        <p>Kalendarz ogrodu działa lokalnie na urządzeniu i nie wymaga konta. Dane ogrodu, wpisy, szablony produktów, ustawienia przypomnień, głosy na przyszłe funkcje, ustawienia lokalne oraz lokalny identyfikator użytkownika są przechowywane na urządzeniu.</p>
-        <p>W wersjach release aplikacja może używać Firebase Analytics do pomiaru podstawowego użycia funkcji, np. uruchomienia aplikacji, ukończenia wprowadzenia, użycia funkcji i zbiorczych liczników. Nie zbieramy celowo notatek ogrodowych, danych konta, adresu email, dokładnej lokalizacji, zdjęć ani kontaktów przez analytics.</p>
-        <p>Lokalne przypomnienia są planowane na urządzeniu. Jeśli napiszesz do wsparcia, Twój adres email i treść wiadomości zostaną użyte tylko do odpowiedzi.</p>
-        <p>Dane lokalne możesz usunąć w ustawieniach aplikacji albo odinstalowując aplikację.</p>
-      </article>
-    </main>
-  </body>
+    <h2>Dane na urządzeniu</h2>
+    <p>Domyślnie obszary, rośliny, prace, obserwacje, plan pielęgnacji, produkty, przypomnienia, ustawienia, lokalne zdjęcia i losowy identyfikator profilu pozostają na urządzeniu. Są przechowywane do usunięcia w aplikacji lub odinstalowania aplikacji. Kopie urządzenia zależą od systemu i dostawcy kopii zapasowej.</p>
+
+    <h2>Opcjonalna chmura i konto</h2>
+    <p>Po jawnym włączeniu chmury Florli korzysta z Google Firebase (Authentication, Cloud Firestore, Cloud Storage, Cloud Functions i App Check), aby przetwarzać identyfikator konta i dane ogrodu wybrane do synchronizacji. Przy rejestracji Firebase Authentication przetwarza też e-mail lub identyfikator logowania zewnętrznego. Zsynchronizowane rekordy i potwierdzone zdjęcia przechowujemy do usunięcia konta. Po usunięciu pojedynczego rekordu może pozostać minimalny znacznik usunięcia, aby urządzenie offline nie odtworzyło danych.</p>
+    <p>Usunięcie konta można zlecić w aplikacji. Dostęp jest blokowany od razu, a dane użytkownika, prywatne zdjęcia i konto Firebase są usuwane w tle; po 24 godzinach wykonywana jest kontrola. Minimalny skrót potwierdzenia i znacznik usunięcia pozostają przez 30 dni od potwierdzonego zakończenia, aby można było odzyskać zagubione potwierdzenie, po czym kwalifikują się do automatycznego usunięcia. Usunięcie przez Firestore TTL zwykle następuje w ciągu kolejnych 24 godzin, ale nie jest natychmiastowe. Kopie i logi utrzymywane przez Google mogą podlegać osobnym okresom retencji dostawcy.</p>
+
+    <h2>Zdjęcia i AI</h2>
+    <p>Zwykła synchronizacja nie wysyła lokalnych zdjęć. Po potwierdzeniu funkcji zdjęciowej Florli tworzy pomniejszoną kopię JPEG, usuwa metadane, w tym GPS, i zapisuje ją prywatnie w Cloud Storage. Niepotwierdzona kopia wygasa po siedmiu dniach. Potwierdzone zdjęcia pozostają z historią ogrodu do usunięcia konta.</p>
+    <p>Po uruchomieniu analizy AI minimalny potrzebny kontekst, opis i potwierdzone zdjęcia trafiają przez Cloud Functions do Google Vertex AI Gemini. Florli przechowuje sprawdzony wynik i zapis rozliczeniowy z profilem do usunięcia konta. Google deklaruje, że bez zgody nie używa danych klienta do trenowania modeli. Część przetwarzania u dostawcy ma własną ograniczoną retencję. Wyszukiwanie produktów korzysta z Grounding with Google Search; Google deklaruje 30 dni retencji promptu, kontekstu i wyniku tej funkcji.</p>
+
+    <h2>Pogoda i lokalizacja</h2>
+    <p>Lokalizacja jest opcjonalna — można wpisać miasto. Przy użyciu lokalizacji urządzenia Florli prosi jednorazowo o przybliżoną lokalizację na pierwszym planie, zaokrągla ją do około 1 km i nie śledzi w tle. Przy aktywnej chmurze zaokrąglone współrzędne trafiają do backendu Florli i do OpenWeather w celu pobrania pogody lub wyszukania miasta. Wspólny cache Florli wygasa po 24 godzinach. Przetwarzanie po stronie OpenWeather podlega jego zasadom prywatności i retencji.</p>
+
+    <h2>Analityka użycia</h2>
+    <p>W buildach sklepowych Firebase Analytics jest domyślnie włączone, aby mierzyć użycie aplikacji i funkcji. Można je w każdej chwili wyłączyć w Ustawieniach. Zdarzenia opisują użycie aplikacji i funkcji oraz mogą zawierać zagregowane liczniki. Nie umieszczamy celowo w analityce notatek, zdjęć, adresu e-mail ani lokalizacji. Nie używamy identyfikatorów reklamowych, personalizacji reklam ani śledzenia między aplikacjami. Retencja i udostępnianie danych Analytics muszą zostać potwierdzone w konsoli produkcyjnej przed wydaniem.</p>
+
+    <h2>Powiadomienia, wsparcie i wybory</h2>
+    <p>Przypomnienia są planowane lokalnie po decyzji użytkownika. Dane wysłane do wsparcia służą do odpowiedzi i rozwiązania problemu. Możesz działać lokalnie, wstrzymać chmurę, wyłączyć analitykę, odmówić uprawnień, usunąć dane lokalne albo zlecić usunięcie konta w aplikacji. Pomoc i zewnętrzny wniosek o usunięcie: <a href="mailto:fueluphelp@gmail.com?subject=Usunięcie%20konta%20Florli">fueluphelp@gmail.com</a>.</p>
+    <p>Florli nie sprzedaje danych osobowych i nie używa ich do reklam podmiotów trzecich ani śledzenia pomiędzy firmami.</p>
+  </article></main></body>
 </html>
